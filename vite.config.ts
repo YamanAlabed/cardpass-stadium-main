@@ -4,8 +4,8 @@ import path from "path";
 
 export default defineConfig(({ mode }) => ({
     server: {
-        host: true, // nur lokale Verbindung
-        port: 8080,
+        host: "0.0.0.0", // nur lokale Verbindung
+        port: 5173,
     },
     plugins: [
         react()

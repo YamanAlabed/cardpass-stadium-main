@@ -41,16 +41,6 @@ const Navigation = () => {
               Register Cards
             </Button>
           </Link>
-          
-          <Link to="/scanner">
-            <Button 
-              variant={isActive("/scanner") ? "default" : "outline"}
-              className="flex items-center gap-2"
-            >
-              <Smartphone className="w-4 h-4" />
-              Scanner
-            </Button>
-          </Link>
           <Link to="/verify">
             <Button 
               variant={isActive("/verify") ? "default" : "outline"}

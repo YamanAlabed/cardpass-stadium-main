@@ -36,7 +36,7 @@ export async function createCodes(batch: number): Promise<GeneratedCode[]> {
 }
 
 export async function deleteCodeById(id: string) {
-    const { error } = await supabase.from('codes').delete().eq('id', id);
+    const { error } = await supabase.from('codes').delete().eq('id', id);  
     if (error) throw error;
 }
 
@@ -67,7 +67,7 @@ export async function registerCode(code: string, fanName: string, fanEmail?: str
     return data as GeneratedCode;
 }
 
-export type ScanStatus = 'registered' | 'unregistered' | 'invalid';
+export type ScanStatus = 'registered' | 'unregistered' | 'error';
 
 export async function logScan(code: string, status: ScanStatus, fanName?: string) {
     const { error } = await supabase.from('scan_history').insert({
